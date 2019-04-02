@@ -76,6 +76,21 @@ NoeudInstSi::NoeudInstSi(Noeud* condition, Noeud* sequence)
 }
 
 int NoeudInstSi::executer() {
+    cout << endl << "daronne de leo" << endl;
   if (m_condition->executer()) m_sequence->executer();
   return 0; // La valeur renvoyée ne représente rien !
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// NoeudRepeter
+////////////////////////////////////////////////////////////////////////////////
+NoeudRepeter::NoeudRepeter(Noeud* cond,Noeud* seq)
+:m_cond(cond),m_seq(seq){
+}
+
+int NoeudRepeter::executer(){
+    do{
+        m_seq->executer();
+    }while(m_cond->executer());
+    return 0;
 }
