@@ -7,8 +7,8 @@ procedure principale()
     jusqua (i<10)
     test1=(i==10);
 #test 2 : on ne doit pas tourner dans la boucle
-    var=0;
+    test2 = 0;
     repeter
-        var= var + 1;
-    jusqua(var<1)
+        test2 = test2 + 1;
+    jusqua(test2<0)
 finproc
