@@ -1,0 +1,5 @@
+# Fichier de test
+procedure principale()
+    test1 = 0;
+    lire(test1);
+finproc

@@ -11,6 +11,7 @@ using namespace std;
 
 #include "Symbole.h"
 #include "Exceptions.h"
+#include "TableSymboles.h"
 
 ////////////////////////////////////////////////////////////////////////////////
 class Noeud {
@@ -85,11 +86,23 @@ class NoeudInstSi : public Noeud {
 class NoeudRepeter : public Noeud {
 public:
     NoeudRepeter(Noeud* cond,Noeud* seq);
-    ~NoeudRepeter() {}
+    ~NoeudRepeter() {};
     int executer();
 private:
     Noeud* m_cond;
     Noeud* m_seq;
+};
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+class NoeudLire : public Noeud {
+public:
+    NoeudLire(TableSymboles & vars);
+    ~NoeudLire() {};
+    int executer();
+private:
+    TableSymboles * m_vars;
 };
 
 #endif /* ARBREABSTRAIT_H */

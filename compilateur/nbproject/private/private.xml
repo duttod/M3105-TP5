@@ -12,9 +12,12 @@
             <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/Interpreteur.cpp</file>
             <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/programme.txt</file>
             <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/motsCles.txt</file>
-            <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/main.cpp</file>
+            <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/TableSymboles.h</file>
+            <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/TableSymboles.cpp</file>
             <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/ArbreAbstrait.h</file>
             <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/Interpreteur.h</file>
+            <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/testlire.txt</file>
+            <file>file:/users/info/etu-s3/bernaelo/m3105/compilateur/M3105-TP5/compilateur/SymboleValue.h</file>
         </group>
     </open-files>
 </project-private>

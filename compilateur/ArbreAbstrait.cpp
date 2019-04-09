@@ -94,3 +94,21 @@ int NoeudRepeter::executer(){
     }while(m_cond->executer());
     return 0;
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// NoeudLire
+////////////////////////////////////////////////////////////////////////////////
+NoeudLire::NoeudLire(TableSymboles & vars)
+:m_vars(&vars){
+}
+
+int NoeudLire::executer(){
+    int val;
+    int i =0;
+    while(i<m_vars->getTaille()){
+        cin >> val;
+        m_vars->get(i)->setValeur(val);
+    }
+    
+    return 0;
+}

@@ -41,6 +41,7 @@
     <itemPath>motsCles.txt</itemPath>
     <itemPath>programme.txt</itemPath>
     <itemPath>testRepeter.txt</itemPath>
+    <itemPath>testlire.txt</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -85,6 +86,8 @@
       <item path="programme.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="testRepeter.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testlire.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -140,6 +143,8 @@
       <item path="programme.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="testRepeter.txt" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="testlire.txt" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

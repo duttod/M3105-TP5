@@ -56,7 +56,7 @@ Noeud* Interpreteur::seqInst() {
   NoeudSeqInst* sequence = new NoeudSeqInst();
   do {
     sequence->ajoute(inst());
-  } while (m_lecteur.getSymbole() == "<VARIABLE>" || m_lecteur.getSymbole() == "si" || m_lecteur.getSymbole() == "repeter");
+  } while (m_lecteur.getSymbole() == "<VARIABLE>" || m_lecteur.getSymbole() == "si" || m_lecteur.getSymbole() == "repeter" || m_lecteur.getSymbole() == "lire");
   // Tant que le symbole courant est un début possible d'instruction...
   // Il faut compléter cette condition chaque fois qu'on rajoute une nouvelle instruction
   return sequence;
@@ -74,13 +74,15 @@ Noeud* Interpreteur::inst() {
   // Compléter les alternatives chaque fois qu'on rajoute une nouvelle instruction
   else if (m_lecteur.getSymbole() == "repeter")
     return repeter();
+  else if (m_lecteur.getSymbole() == "lire")
+    return lire();
   else erreur("Instruction incorrecte");
 }
 
 Noeud* Interpreteur::affectation() {
   // <affectation> ::= <variable> = <expression> 
   tester("<VARIABLE>");
-  Noeud* var = m_table.chercheAjoute(m_lecteur.getSymbole()); // La variable est ajoutée à la table eton la mémorise
+  Noeud* var = m_table.chercheAjoute(m_lecteur.getSymbole()); // La variable est ajoutée à la table et on la mémorise
   m_lecteur.avancer();
   testerEtAvancer("=");
   Noeud* exp = expression();             // On mémorise l'expression trouvée
@@ -148,5 +150,24 @@ Noeud* Interpreteur::repeter() {
     Noeud* condition = expression(); // On mémorise la condition
     testerEtAvancer(")");
     return new NoeudRepeter(condition,sequence);
+}
+
+Noeud* Interpreteur::lire() {
+    //        <lire> ::= lire ( <variable> {, <variable>} )
+    TableSymboles vars = new TableSymboles();
+    int passage = 0;
+    testerEtAvancer("lire");
+    testerEtAvancer("(");
+    do{
+        if (passage >= 1){
+            testerEtAvancer(",");
+        }
+        tester("<VARIABLE>");
+        vars.chercheAjoute(m_table.chercheAjoute(m_lecteur.getSymbole()));
+        m_lecteur.avancer();
+        passage ++;
+    }while(m_lecteur.getSymbole() == ",");
+    testerEtAvancer(")");
+    return new NoeudLire(vars);
 }
 
