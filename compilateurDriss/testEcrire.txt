@@ -1,0 +1,12 @@
+# Fichier de Ecrire
+# Les lignes de commentaires commencent par #
+procedure principale()
+
+i = 5;
+
+ecrire("i=",i);
+
+
+
+finproc
+# Commentaire Final

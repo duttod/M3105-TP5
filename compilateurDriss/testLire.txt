@@ -1,0 +1,14 @@
+# Fichier de lire
+# Les lignes de commentaires commencent par #
+procedure principale()
+
+i = 0;
+c = 0;
+d = 0;
+lire(i,c,d);
+ecrire("i=",i,"c=",c,"d=",d);
+
+
+
+finproc
+# Commentaire Final

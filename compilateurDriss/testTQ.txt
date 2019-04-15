@@ -1,0 +1,16 @@
+# Fichier de testTQ
+# Les lignes de commentaires commencent par #
+procedure principale()
+  #test1 : on rentre dans la boucle
+    i=1;
+    tantque(i<10)
+        i=i+1;
+    fintantque
+    test1=(i==10);
+    #test2 : on rentre pas dans la boucle
+    test2=1;
+    tantque(0)
+        test2=0;
+    fintantque    
+finproc
+# Commentaire Final

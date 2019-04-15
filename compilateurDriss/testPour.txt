@@ -1,0 +1,23 @@
+# Fichier de Pour
+# Les lignes de commentaires commencent par #
+procedure principale()
+  #test1 : on rentre dans la boucle
+    #i doit valoir 10
+    a=0;
+    pour(i=0;i<10;i=i+1)
+        a=a+1;
+    finpour
+    
+    #b doit valoir 10
+    b=0;
+    pour(;b<10;b=b+1)
+        a=a+1;
+    finpour
+
+    #c doit valoir 10
+    pour(c=0;c<10;)
+        c=c+1;
+    finpour
+
+finproc
+# Commentaire Final
