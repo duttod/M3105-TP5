@@ -147,4 +147,29 @@ class NoeudInstLire : public Noeud {
     std::vector<Noeud*> m_vectNoeud;
 };
 
+////////////////////////////////////////////////////////////////////////////////
+class NoeudSiRiche : public Noeud {
+public:
+    NoeudSiRiche(vector<Noeud*> & conditions, vector<Noeud*> & sequences,Noeud* sequencesinon);
+    ~NoeudSiRiche() {};
+    int executer();
+    void traduitEnCPP(ostream & cout,unsigned int indentation) const;
+private:
+    vector<Noeud*> m_conditions;
+    vector<Noeud*> m_sequences;
+    Noeud* m_sequencesinon;
+};
+
+////////////////////////////////////////////////////////////////////////////////
+class NoeudRepeter : public Noeud {
+public:
+    NoeudRepeter(Noeud* cond,Noeud* seq);
+    ~NoeudRepeter() {};
+    int executer();
+    void traduitEnCPP(ostream & cout,unsigned int indentation) const;
+private:
+    Noeud* m_cond;
+    Noeud* m_seq;
+};
+
 #endif /* ARBREABSTRAIT_H */

@@ -38,6 +38,8 @@ private:
     Noeud*  instPour();    // <instPour>    ::= pour ([<affectation>] ; <expression> ; [<affectation>]) <seqInst> finpour
     Noeud*  instEcrire();  // <instEcrire>  ::= ecrire( <expression> | <chaine> {, <expression> | <chaine> });
     Noeud*  instLire();    // <instLire>    ::=lire( <variable> {, <variable> });
+    Noeud*  instSiRiche(); //     <siRiche> ::= si ( <expression> ) <seqInst> {sinon si ( <expression> ) <seqInst> } [sinon <seqInst>] finsi
+    Noeud*  repeter();     //     <repeter> ::= repeter <seqInst> jusqua ( <expression> )
     // outils pour simplifier l'analyse syntaxique
     void tester (const string & symboleAttendu) const throw (SyntaxeException);   // Si symbole courant != symboleAttendu, on lève une exception
     void testerEtAvancer(const string & symboleAttendu) throw (SyntaxeException); // Si symbole courant != symboleAttendu, on lève une exception, sinon on avance

@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=compilateur
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/compilateur
+CND_ARTIFACT_NAME_Debug=compilateurdriss
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/compilateurdriss
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=compilateur.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/compilateur.tar
+CND_PACKAGE_NAME_Debug=compilateurdriss.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/compilateurdriss.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=compilateur
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/compilateur
+CND_ARTIFACT_NAME_Release=compilateurdriss
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/compilateurdriss
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=compilateur.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/compilateur.tar
+CND_PACKAGE_NAME_Release=compilateurdriss.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/compilateurdriss.tar
 #
 # include compiler specific variables
 #

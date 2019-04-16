@@ -1,0 +1,13 @@
+# Fichier de test
+# Les lignes de commentaires commencent par #
+procedure principale()
+  i = 12;
+  si (i>12)
+    j=0;
+  sinonsi (i<12)
+    j=0;
+  sinon
+    j=1;
+  finsi
+finproc
+# Commentaire Final
